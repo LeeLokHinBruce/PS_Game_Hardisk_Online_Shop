@@ -9,8 +9,8 @@
         
         <!-- Staff Password -->
         <div class="form-row">
-            <label for="pwd">Staff Password:</label>
-            <input type="password" id="pwd" name="pwd" min="8" max="16" pattern="{8,16}" required/>
+            <label for="password">Staff Password:</label>
+            <input type="password" id="password" name="password" min="8" max="16" pattern="{8,16}" required/>
         </div>
 
         <!-- Login -->

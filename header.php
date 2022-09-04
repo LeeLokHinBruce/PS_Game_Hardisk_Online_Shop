@@ -1,6 +1,7 @@
 <?php 
     session_start();  // need to call when use $_SESSION
     include 'stock.php';
+    include 'dbConnect.php';
 ?>
 
 <!DOCTYPE html>
