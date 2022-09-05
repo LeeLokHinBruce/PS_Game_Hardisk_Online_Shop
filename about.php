@@ -1,4 +1,4 @@
-<?php include('header.php') ?>
+<?php include_once('header.php') ?>
 
 <h1>ABOUT</h1>
 
@@ -8,4 +8,4 @@
     <p>We have been offered ps4 and ps5 products as a selling point to the customers who love to play video games.</p>
 </div>
 
-<?php include('footer.php') ?>
+<?php include_once('footer.php') ?>

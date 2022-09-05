@@ -1,6 +1,6 @@
 <?php 
-    include('header.php');
-    include('functions.php');
+    include_once('header.php');
+    include_once('functions.php');
 
     // used to avoid being linked directly by client who isn't staff
     // if (!isset($_SESSION['email'])) header('Location: ./login.php');
@@ -50,4 +50,4 @@
     // echo '</div></div>';
 ?>
 
-<?php include('footer.php') ?>
+<?php include_once('footer.php') ?>

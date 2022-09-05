@@ -1,4 +1,4 @@
-<?php include('header.php') ?>
+<?php include_once('header.php') ?>
     <i class="fa fa-user-circle-o" style="font-size: 120px; margin-bottom: 30px;"></i><br>
     <form action="./functions.php?op=checkLogin" method="post">            
         <!-- Staff Email -->
@@ -17,4 +17,4 @@
         <input type="submit" value="Login" />
     </form>
 
-<?php include('footer.php') ?>
+<?php include_once('footer.php') ?>

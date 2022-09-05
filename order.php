@@ -1,15 +1,43 @@
-<?php include('header.php') ?>
+<?php 
+    include_once('header.php');
+    include_once('dbConnect.php');
+?>
 
 <form action="./functions.php?op=createOrder" method="post">
     <label for="hd_name" style="font-size: 24px;">Product Name</label>
     <!-- Query String -->
     <!-- $_GET: get API endpoint => ./order.php?hd_id={value} -->
     <!-- $_GET => SUPER GLOBAL -->
-    <input type="hidden" id="hd_id" name="hd_id" value="<?php echo $_GET['hd_id'] ?>"> <!-- used to send data when the form is submitted -->
-    
-    <h2 style="padding-top: 10px"><?php echo $items[$_GET['hd_id']-1]['name'] ?></h2>
 
-    <img src="./images/<?php echo $items[$_GET['hd_id']-1]['img'] ?>" alt="<?php echo $items[$_GET['hd_id']-1]['name'] ?>" width="300px">
+    <!-- Print database in MySQL -->
+    <?php
+        $hdQ = mysqli_query($dbConnection, "SELECT * FROM `hardisk` WHERE `hd_id`=".$_GET['hd_id']);
+        $hd = mysqli_fetch_assoc($hdQ);
+
+        echo '<input type="hidden" id="hd_id" name="hd_id" value='.$hd['hd_id'].'>';
+
+        echo '<h2 style="padding-top: 10px">'.$hd['name'].'</h2>';
+
+        echo '<img src="./images/'.$hd['img'].'" alt="'.$hd['name'].'" width="300px">';
+    ?>
+
+    <!-- Print database through stock.php -->
+    <!-- <input 
+        type="hidden" 
+        id="hd_id" 
+        name="hd_id" 
+        value="<?php #echo $_GET['hd_id'] ?>"
+    >  -->
+    <!-- used to send data when the form is submitted -->
+    
+    <!-- <h2 style="padding-top: 10px">
+        <?php #echo $items[$_GET['hd_id']-1]['name'] ?>
+    </h2> -->
+
+    <!-- <img 
+        src="./images/<?php #echo $items[$_GET['hd_id']-1]['img'] ?>" alt="<?php #echo $items[$_GET['hd_id']-1]['name'] ?>" width="300px"
+    > -->
+
 
     <!-- User Info -->
     <div id="userInfo">
@@ -38,4 +66,4 @@
     <input class="orderBtn" type="submit" value="Order">
 </form>
 
-<?php include('footer.php') ?>
+<?php include_once('footer.php') ?>

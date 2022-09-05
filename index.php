@@ -1,11 +1,11 @@
-<?php include('header.php') ?>
+<?php include_once('header.php') ?>
 
     <h1>Order List</h1>
     <h2>discount with <?php echo date('n') ?> month</h2>
 
     <div class="flex-grid">
         <?php 
-        // header.php has included stock.php, so $items is assigned
+        // header.php has include_onced stock.php, so $items is assigned
         $hdQ = mysqli_query($dbConnection, "SELECT * FROM `hardisk`");  // select one table 
 
         while($hd = mysqli_fetch_assoc($hdQ)){  // return these mySQL data through associative array
@@ -23,4 +23,4 @@
         ?>
     </div>
 
-<?php include('footer.php') ?>
+<?php include_once('footer.php') ?>
