@@ -1,0 +1,185 @@
+:root {
+    --main-nav-bg-color: rgb(48, 158, 143);
+    --btn-hover-color: rgb(98, 204, 190);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* header */
+nav {
+    position: sticky;
+    top: 0;
+    background-color: var(--main-nav-bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 20px;
+    margin-bottom: 30px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 6px;
+}
+
+nav ul li a {
+    color: aliceblue;
+    font-size: 20px;
+}
+
+nav ul li a:hover {
+    border-bottom: 2px solid white;
+}
+
+.clientMenu li {
+    padding-right: 8px;
+}
+
+/* index */
+h1 {
+    padding-bottom: 20px;
+    font-size: 50px;
+}
+
+h2 {
+    padding-bottom: 30px;
+    font-size: 30px;
+}
+
+.flex-grid {
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.items {
+    margin: 0 14px;
+    border-radius: 8px;
+    padding: 8px 8px 18px;
+    background-color: rgba(128, 128, 128, 0.116);
+    width: 230px;
+}
+
+.itemContent-header {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.orderBtn {
+    background-color: var(--main-nav-bg-color);
+    color: aliceblue;
+    border-radius: 4px;
+    padding: 8px;
+    transition: .2s ease-in-out;
+}
+
+.orderBtn:hover {
+    background-color: var(--btn-hover-color);
+    color: black;
+}
+
+/* form */
+form {
+    display: inline-block;
+}
+
+#userInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-row {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.form-row input {
+    margin-left: 4px;
+    font-size: 16px;
+    text-align: left;
+    padding: 4px 2px;
+    background-color: gainsboro;
+    border: none;
+    border-radius: 4px;
+}
+
+input[type='submit'] {
+    background-color: var(--main-nav-bg-color);
+    color: aliceblue;
+    border-radius: 4px;
+    padding: 8px 24px;
+    border: none;
+    transition: .2s ease-in-out;
+    font-size: 20px;
+}
+
+input[value="Login"] {
+    margin-top: 10px;
+}
+
+input[type='submit']:hover {
+    background-color: var(--btn-hover-color);
+    color: black;
+    cursor: pointer;
+}
+
+/* all orders */
+#allOrdersList {
+    display: flex;
+    justify-content: center;
+}
+
+#orderList-form {
+    background-color: rgba(220, 220, 220, 0.4);
+    border-radius: 8px;
+    padding: 4px 12px;
+    height: 380px;
+    width: 320px;
+    overflow-y: scroll;
+}
+
+.order {
+    text-align: left;
+    margin: 10px auto;
+    border-radius: 8px;
+    padding: 6px;
+}
+
+.orderBgColor-gray {
+    background-color: rgb(206, 206, 206);
+}
+
+.orderBgColor-white {
+    background-color: #fff;
+}
+
+/* footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--main-nav-bg-color);
+    padding: 30px 0;
+}
+
+.footerContent h3,
+.footerContent p {
+    padding-bottom: 6px;
+    color: aliceblue;
+}
